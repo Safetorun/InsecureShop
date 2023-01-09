@@ -42,7 +42,7 @@ class WebViewActivity : AppCompatActivity() {
             if (data == null) {
                 finish()
             }
-            webview.loadUrl(data)
+            data?.let { it1 -> webview.loadUrl(it1) }
             Prefs.getInstance(this).data = data
         }
 
